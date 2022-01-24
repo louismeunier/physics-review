@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "CMU Serif Roman";
-  src: local("CMU Serif Roman"),
-    url("/fonts/cmu-serif-roman.ttf") format("truetype");
+  font-family: 'CMU Serif Roman';
+  src: local('CMU Serif Roman'),
+    url('/fonts/cmu-serif-roman.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "CMU Bright Roman";
-  src: local("CMU Bright Roman"),
-    url("/fonts/cmu-bright-roman.ttf") format("truetype");
+  font-family: 'CMU Bright Roman';
+  src: local('CMU Bright Roman'),
+    url('/fonts/cmu-bright-roman.ttf') format('truetype');
 }
 
 :root {
