@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "CMU Serif Roman";
+    src: local("CMU Serif Roman"), url("/fonts/cmu-serif-roman.ttf") format("truetype");
+  }
+
+@font-face {
+    font-family: "CMU Bright Roman";
+    src: local("CMU Bright Roman"), url("/fonts/cmu-bright-roman.ttf") format("truetype");
+}  
+
+:root {
+    --gray: #d9d3d3ff;
+    --dark-navy: #264653ff;
+    --green: #2a9d8fff;
+    --yellow-orange: #e9c46aff;
+    --dark-orange: #e76f51ff;
+    --red-ish: #f04245ff;
+    --gray-bkd: rgb(237, 237, 237);
+}
+
+body {
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+}

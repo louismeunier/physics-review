@@ -1,0 +1,32 @@
+{
+  "name": "physics",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:all": "yarn dev:site & yarn dev:routes",
+    "dev:site": "vite",
+    "dev:routes": "routify",
+    "build:all": "yarn build:site & yarn build:routes",
+    "build:site": "vite build",
+    "build:routes": "routify -b",
+    "preview": "vite preview",
+    "start": "sirv public --single",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@roxi/routify": "^2.18.4",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tsconfig/svelte": "^2.0.1",
+    "@types/matter-js": "^0.17.6",
+    "sass": "^1.49.0",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.7",
+    "svelte-preprocess": "^4.9.8",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2"
+  },
+  "dependencies": {
+    "matter-js": "^0.18.0"
+  }
+}
