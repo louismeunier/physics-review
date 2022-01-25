@@ -43,7 +43,7 @@
         for (let i = 0; i < number; i++) {
             const separation = 1.9,
                 circle = Bodies.circle(xx + i * (size * separation), yy + length, size, 
-                    { inertia: Infinity, restitution: 1, friction: 0, frictionAir: 0.0001, slop: 1, render: {fillStyle: 'black' }}),
+                    { inertia: Infinity, restitution: 1, friction: 0, frictionAir: 0.0001, slop: 1, render: { fillStyle: i == 0 || i == number - 1 ? "purple" : "black" }}),
                 constraint = Constraint.create({ pointA: { x: xx + i * (size * separation), y: yy }, bodyB: circle });
 
             Composite.addBody(newtonsCradle, circle);
@@ -76,13 +76,6 @@
             min: { x: 0, y: 50 },
             max: { x: 800, y: 600 }
         });
-
-        Events.on(engine, 'collisionStart', e => {
-            const newColor = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'][Math.floor(Math.random()*6)]
-            const bodies = e.source.detector.bodies;
-            bodies[0].render.fillStyle = newColor;
-            bodies[bodies.length - 1].render.fillStyle = newColor;
-        })
     })
 </script>
 
