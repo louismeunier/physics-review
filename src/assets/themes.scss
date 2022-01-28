@@ -1,11 +1,22 @@
+:root {
+  --gray: #d9d3d3ff;
+  --dark-navy: #264653ff;
+  --green: #2a9d8fff;
+  --yellow-orange: #e9c46aff;
+  --dark-orange: #f4a261;
+  --red-ish: #e76f51;
+}
+
 $themes: (
   'light': (
     'bg-color': #ffffff,
     'text-color': #333,
+    'sub-color': var(--gray),
   ),
   'dark': (
-    'bg-color': #303437,
+    'bg-color': #333,
     'text-color': #ffffff,
+    'sub-color': var(--gray),
   ),
 );
 
@@ -16,6 +27,7 @@ $themes: (
   $theme: (
     'bg-color': map-get($theme-vars, 'bg-color'),
     'text-color': map-get($theme-vars, 'text-color'),
+    'sub-color': map-get($theme-vars, 'sub-color'),
   );
 
   body.#{$theme-name} {

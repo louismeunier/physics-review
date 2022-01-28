@@ -10,25 +10,13 @@
     url('/fonts/cmu-bright-roman.ttf') format('truetype');
 }
 
-:root {
-  --gray: #d9d3d3ff;
-  --dark-navy: #264653ff;
-  --green: #2a9d8fff;
-  --yellow-orange: #e9c46aff;
-  --dark-orange: #e76f51ff;
-  --red-ish: #f04245ff;
-  --gray-bkd: rgb(237, 237, 237);
-}
-
 body {
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;
-}
-
-.app {
   height: 100vh;
+  width: 100vw;
 }
 
 h1 {
@@ -40,5 +28,5 @@ h2 {
 }
 
 a {
-  color: white;
+  color: var(--green);
 }
