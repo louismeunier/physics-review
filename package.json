@@ -12,13 +12,19 @@
     "preview": "vite preview",
     "start": "sirv public --single",
     "pretty": "yarn prettier --write .",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "devDependencies": {
     "@roxi/routify": "^2.18.4",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
     "@tsconfig/svelte": "^2.0.1",
     "@types/matter-js": "^0.17.6",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.2",
     "prettier": "2.5.1",
     "sass": "^1.49.0",
     "svelte": "^3.44.0",
