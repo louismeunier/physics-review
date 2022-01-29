@@ -1,7 +1,9 @@
+<script>
+  import constants from '../utils/constants';
+</script>
+
 <div>
-  <a href="https://github.com/louismeunier" target="_blank"
-    >© 2022, Louis Meunier</a
-  >
+  <a href="{constants.LICENSE}" target="_blank">© 2022, Louis Meunier</a>
 </div>
 
 <style>
