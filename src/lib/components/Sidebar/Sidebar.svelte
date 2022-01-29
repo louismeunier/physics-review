@@ -1,9 +1,13 @@
 <script lang="ts">
-  import Menu from '../icons/Menu.svelte';
+  import constants from '../../utils/constants';
+
+  import { onMount } from 'svelte';
   import { fly } from 'svelte/transition';
+
+  import Menu from '../icons/Menu.svelte';
   import SidebarSection from './SidebarSection.svelte';
   import SidebarItem from './SidebarItem.svelte';
-  import { onMount } from 'svelte';
+  import External from '../icons/External.svelte';
 
   let visible = false;
   let toggleElem: HTMLElement;
@@ -41,6 +45,11 @@
       <SidebarSection>
         <SidebarItem path="/" name="Home" />
         <SidebarItem path="/about" name="About" />
+        <SidebarItem
+          path="{constants.GITHUB}"
+          isExternal="{true}"
+          name="Source"
+        />
       </SidebarSection>
       <SidebarSection>
         <SidebarItem path="/review/kinematics" name="Kinematics" />
