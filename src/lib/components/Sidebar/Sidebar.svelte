@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Menu from './icons/Menu.svelte';
+  import Menu from '../icons/Menu.svelte';
   import { fly } from 'svelte/transition';
   import SidebarSection from './SidebarSection.svelte';
   import SidebarItem from './SidebarItem.svelte';

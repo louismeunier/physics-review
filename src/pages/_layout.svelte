@@ -9,7 +9,7 @@
   import Sun from '../lib/components/icons/Sun.svelte';
   import { onMount } from 'svelte';
   import Footer from '../lib/components/Footer.svelte';
-  import Sidebar from '../lib/components/Sidebar.svelte';
+  import Sidebar from '../lib/components/Sidebar/Sidebar.svelte';
 
   onMount(() => {
     setSiteTheme(getSiteThemePreference());
