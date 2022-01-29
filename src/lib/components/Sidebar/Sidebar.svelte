@@ -3,6 +3,7 @@
   import { fly } from 'svelte/transition';
   import SidebarSection from './SidebarSection.svelte';
   import SidebarItem from './SidebarItem.svelte';
+  import { onMount } from 'svelte';
 
   let visible = false;
   let toggleElem: HTMLElement;
@@ -20,6 +21,15 @@
       }
     }, 4);
   };
+
+  onMount(() => {
+    document.addEventListener('keydown', key => {
+      console.log(key.code);
+      if (key.code == 'Escape') {
+        visible = false;
+      }
+    });
+  });
 </script>
 
 <div class="sidebar-wrapper">
@@ -27,10 +37,13 @@
     <Menu />
   </div>
   {#if visible}
-    <div class="sidebar" transition:fly="{{ duration: 400, x: -400 }}">
+    <div class="sidebar" transition:fly="{{ duration: 500, x: -400 }}">
       <SidebarSection>
         <SidebarItem path="/" name="Home" />
-        <SidebarItem path="/" name="Home" />
+        <SidebarItem path="/about" name="About" />
+      </SidebarSection>
+      <SidebarSection>
+        <SidebarItem path="/review/kinematics" name="Kinematics" />
         <SidebarItem path="/about" name="About" />
       </SidebarSection>
     </div>
@@ -62,8 +75,9 @@
     width: fit-content;
     min-height: calc(100vh - 50px);
     height: fit-content;
-    /* padding-right: 5px; */
     padding-top: 50px;
+    border-right: 2px solid var(--text-color);
+    box-shadow: 0.2em 0 0.2em var(--text-color);
   }
 
   .toggle :global(svg) {
