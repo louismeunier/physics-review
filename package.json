@@ -7,7 +7,7 @@
     "dev:all": "yarn dev:site & yarn dev:routes",
     "dev:site": "vite",
     "dev:routes": "routify",
-    "build:all": "yarn build:site && yarn build:routes",
+    "build:all": "yarn build:routes && yarn build:site",
     "build:site": "vite build",
     "build:routes": "routify -b",
     "preview": "vite preview",
