@@ -9,7 +9,7 @@
 {#if !isExternal}
   <a href="{path}"><div>{name}</div></a>
 {:else}
-  <a href="{path}" target="_blank">
+  <a href="{path}" target="_blank" rel="noreferrer">
     <div>
       {name}
       <External />

@@ -3,7 +3,9 @@
 </script>
 
 <div>
-  <a href="{constants.LICENSE}" target="_blank">© 2022, Louis Meunier</a>
+  <a href="{constants.LICENSE}" target="_blank" rel="noreferrer"
+    >© 2022, Louis Meunier</a
+  >
 </div>
 
 <style>
