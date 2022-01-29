@@ -11,7 +11,8 @@
     "build:site": "vite build",
     "build:routes": "routify -b",
     "preview": "vite preview",
-    "start": "serve dist",
+    "start": "serve dist --single",
+    "serve": "serve dist --single",
     "pretty": "yarn prettier --write .",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "prepare": "husky install"
