@@ -1,13 +1,14 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
   import {
     toggleSiteTheme,
     getSiteTheme,
     getSiteThemePreference,
     setSiteTheme,
   } from '../lib/utils/theme';
+
   import Moon from '../lib/components/icons/Moon.svelte';
   import Sun from '../lib/components/icons/Sun.svelte';
-  import { onMount } from 'svelte';
   import Footer from '../lib/components/Footer.svelte';
   import Sidebar from '../lib/components/Sidebar/Sidebar.svelte';
 
@@ -24,21 +25,21 @@
   }
 </script>
 
-<div>
+<div class="layout">
   <Sidebar />
-  <button on:click="{toggleTheme}">
+  <div class="fake-button" on:click="{toggleTheme}">
     {#if currentTheme == 'light'}
       <Moon />
     {:else}
       <Sun />
     {/if}
-  </button>
+  </div>
   <slot />
   <Footer />
 </div>
 
 <style>
-  div {
+  .layout {
     /* width: 100vw; */
     height: 100vh;
     display: grid;
@@ -50,11 +51,11 @@
     overflow: hidden;
   }
 
-  div :global(.content) {
+  .layout :global(.content) {
     grid-column-start: 2;
   }
 
-  button {
+  .fake-button {
     border: none;
     position: fixed;
     right: 0;
@@ -65,7 +66,7 @@
     width: 55px;
   }
 
-  button:hover {
+  .fake-button:hover {
     cursor: pointer;
   }
 </style>
