@@ -1,5 +1,7 @@
 <div>
-  <a href="https://github.com/louismeunier" target="_blank">source code</a>
+  <a href="https://github.com/louismeunier" target="_blank"
+    >© 2022, Louis Meunier</a
+  >
 </div>
 
 <style>
@@ -12,6 +14,6 @@
     /* background-color: var(--sub-color); */
     gap: 5rem;
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
   }
 </style>
