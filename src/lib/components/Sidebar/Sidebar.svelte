@@ -42,7 +42,9 @@
     document
       .getElementsByClassName('sidebar-wrapper')[0]
       .addEventListener('focusout', () => {
-        visible = false;
+        if (visible === true) {
+          toggleSidebar();
+        }
       });
   });
 </script>
@@ -64,6 +66,10 @@
       </SidebarSection>
       <SidebarSection>
         <SidebarItem path="/review/kinematics" name="Kinematics" />
+        <SidebarItem path="/review/dynamics" name="Dynamics" />
+        <SidebarItem path="/review/work&energy" name="Work and Energy" />
+        <SidebarItem path="/review/momentum" name="Momentum" />
+        <SidebarItem path="/review/rotation" name="Rotations" />
       </SidebarSection>
     </div>
   {/if}
