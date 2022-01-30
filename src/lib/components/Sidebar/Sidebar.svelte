@@ -7,7 +7,7 @@
   import Menu from '../icons/Menu.svelte';
   import SidebarSection from './SidebarSection.svelte';
   import SidebarItem from './SidebarItem.svelte';
-  import External from '../icons/External.svelte';
+  import Footer from '../Footer.svelte';
 
   let visible = false;
   let toggleElem: HTMLElement;
@@ -49,7 +49,7 @@
   });
 </script>
 
-<div class="sidebar-wrapper" tabindex="0">
+<div class="sidebar-wrapper" tabindex="-1">
   <div bind:this="{toggleElem}" class="toggle" on:click="{toggleSidebar}">
     <Menu />
   </div>
@@ -71,6 +71,7 @@
         <SidebarItem path="/review/momentum" name="Momentum" />
         <SidebarItem path="/review/rotation" name="Rotations" />
       </SidebarSection>
+      <Footer />
     </div>
   {/if}
 </div>
@@ -85,6 +86,7 @@
     flex-direction: column;
     align-items: baseline;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .sidebar {

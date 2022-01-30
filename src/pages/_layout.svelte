@@ -35,7 +35,6 @@
     {/if}
   </div>
   <slot />
-  <Footer />
 </div>
 
 <style>
@@ -44,16 +43,12 @@
     height: 100vh;
     display: grid;
     grid-template-columns: minmax(0, 2em) 1fr minmax(0, 2em);
-    grid-template-rows: 1fr auto;
-    grid-template-areas:
-      'main'
-      'footer';
     overflow: hidden;
   }
 
   .layout :global(.content) {
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 3;
     overflow-y: auto;
   }
 
