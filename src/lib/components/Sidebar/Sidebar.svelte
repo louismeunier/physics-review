@@ -80,12 +80,11 @@
     left: 0;
     display: flex;
     min-width: 20vw;
-    width: fit-content;
+    white-space: nowrap;
     height: 100vh;
     flex-direction: column;
     align-items: baseline;
-    position: absolute;
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .sidebar {
@@ -97,7 +96,6 @@
     bottom: 0;
     top: 0;
     min-width: 20vw;
-    width: fit-content;
     min-height: calc(100vh - 50px);
     height: fit-content;
     padding-top: 50px;
