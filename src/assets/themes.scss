@@ -11,12 +11,12 @@ $themes: (
   'light': (
     'bg-color': #ffffff,
     'text-color': #333,
-    'sub-color': var(--gray),
+    'sub-color': #d9d3d3ff,
   ),
   'dark': (
     'bg-color': #333,
     'text-color': #ffffff,
-    'sub-color': var(--gray),
+    'sub-color': #d9d3d3ff,
   ),
 );
 
@@ -31,21 +31,11 @@ $themes: (
   );
 
   body.#{$theme-name} {
-    // // define a css variable for each shade
-    // @each $name, $color in $shades {
-    //   --#{$name}: #{$color};
-    // }
-
-    // // define a css variable for each color
-    // @each $name, $color in $colors {
-    //   --#{$name}: #{$color};
-    //   --#{$name}-dark: #{darken($color, 10%)};
-    //   --#{$name}-darker: #{darken($color, 20%)};
-    // }
-
-    // define a css variable for each theme color
     @each $name, $color in $theme {
       --#{$name}: #{$color};
+      --#{$name}-dark: #{darken($color, 10%)};
+      --#{$name}-darker: #{darken($color, 20%)};
+      --#{$name}-darkest: #{darken($color, 30%)};
     }
   }
 }

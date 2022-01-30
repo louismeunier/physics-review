@@ -11,6 +11,12 @@
 }
 
 :root {
+  font-family: 'CMU Bright Roman';
+}
+
+h1,
+h2,
+h3 {
   font-family: 'CMU Serif Roman';
 }
 
@@ -33,4 +39,20 @@ h2 {
 
 a {
   color: var(--green);
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sub-color-darkest);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sub-color-dark);
 }

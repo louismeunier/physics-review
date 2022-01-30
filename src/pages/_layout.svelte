@@ -53,6 +53,8 @@
 
   .layout :global(.content) {
     grid-column-start: 2;
+    grid-column-end: 4;
+    overflow-y: auto;
   }
 
   .fake-button {
