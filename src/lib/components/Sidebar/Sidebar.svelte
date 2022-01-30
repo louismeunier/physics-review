@@ -28,15 +28,26 @@
 
   onMount(() => {
     document.addEventListener('keydown', key => {
-      console.log(key.code);
-      if (key.code == 'Escape') {
-        visible = false;
+      if (key.code === 'Escape' && visible === true) {
+        toggleSidebar();
+      }
+      if (
+        key.code === 'Enter' &&
+        document.activeElement ===
+          document.getElementsByClassName('sidebar-wrapper')[0]
+      ) {
+        toggleSidebar();
       }
     });
+    document
+      .getElementsByClassName('sidebar-wrapper')[0]
+      .addEventListener('focusout', () => {
+        visible = false;
+      });
   });
 </script>
 
-<div class="sidebar-wrapper">
+<div class="sidebar-wrapper" tabindex="0">
   <div bind:this="{toggleElem}" class="toggle" on:click="{toggleSidebar}">
     <Menu />
   </div>
@@ -53,7 +64,6 @@
       </SidebarSection>
       <SidebarSection>
         <SidebarItem path="/review/kinematics" name="Kinematics" />
-        <SidebarItem path="/about" name="About" />
       </SidebarSection>
     </div>
   {/if}
@@ -63,7 +73,7 @@
   .sidebar-wrapper {
     left: 0;
     display: flex;
-    min-width: 25vw;
+    min-width: 20vw;
     width: fit-content;
     height: 100vh;
     flex-direction: column;
@@ -86,7 +96,6 @@
     height: fit-content;
     padding-top: 50px;
     border-right: 2px solid var(--text-color);
-    box-shadow: 0.2em 0 0.2em var(--text-color);
   }
 
   .toggle :global(svg) {
