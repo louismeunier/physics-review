@@ -1,0 +1,7 @@
+# [physics.rip](https://physics.rip)
+
+An interactive introductory physics review site.
+
+## Development
+
+This site is built with Svelte, using Routify for routing and Vite for building.
