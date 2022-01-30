@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev:all": "yarn dev:site & yarn dev:routes",
+    "dev:all:host": "yarn dev:site --host & yarn dev:routes",
     "dev:site": "vite",
     "dev:routes": "routify",
     "build:all": "yarn build:routes && yarn build:site",
@@ -18,7 +19,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "yarn pretty"
   },
   "devDependencies": {
     "@roxi/routify": "^2.18.4",
