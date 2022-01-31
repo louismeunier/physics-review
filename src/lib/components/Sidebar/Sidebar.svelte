@@ -39,13 +39,6 @@
         toggleSidebar();
       }
     });
-    document
-      .getElementsByClassName('sidebar-wrapper')[0]
-      .addEventListener('focusout', () => {
-        if (visible === true) {
-          toggleSidebar();
-        }
-      });
   });
 </script>
 
@@ -74,13 +67,19 @@
       <Footer />
     </div>
   {/if}
+  <div
+    on:click="{() => {
+      visible && toggleSidebar();
+    }}"
+    class="off-focus"
+  ></div>
 </div>
 
 <style>
   .sidebar-wrapper {
     left: 0;
     display: flex;
-    min-width: 20vw;
+    width: 100vw;
     white-space: nowrap;
     height: 100vh;
     flex-direction: column;
@@ -102,6 +101,14 @@
     height: fit-content;
     padding-top: 50px;
     border-right: 2px solid var(--text-color);
+    z-index: 100;
+  }
+
+  .off-focus {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
   }
 
   .toggle :global(svg) {
