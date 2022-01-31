@@ -68,6 +68,7 @@
     </div>
   {/if}
   <div
+    style="display: {visible ? 'flex' : 'none'}"
     on:click="{() => {
       visible && toggleSidebar();
     }}"
