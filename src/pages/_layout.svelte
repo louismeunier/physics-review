@@ -12,11 +12,12 @@
   import Footer from '../lib/components/Footer.svelte';
   import Sidebar from '../lib/components/Sidebar/Sidebar.svelte';
 
+  let currentTheme: string;
+
   onMount(() => {
     setSiteTheme(getSiteThemePreference());
+    currentTheme = getSiteTheme() || 'dark';
   });
-
-  let currentTheme = getSiteTheme() || 'dark';
 
   function toggleTheme() {
     toggleSiteTheme();
