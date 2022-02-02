@@ -1,8 +1,6 @@
 <script>
   import Matter from 'matter-js';
-  import { getSiteTheme } from '../utils/theme';
   import { onMount } from 'svelte';
-  import { get } from 'svelte/store';
 
   onMount(() => {
     const {
@@ -58,16 +56,16 @@
         constraint = Constraint.create({
           pointA: { x: xx + i * (size * separation), y: yy },
           bodyB: circle,
-          render: { strokeStyle: getSiteTheme() == 'dark' ? 'white' : 'black' },
+          render: { strokeStyle: 'black' },
         });
-
-      Composite.addBody(newtonsCradle, circle);
-      Composite.addConstraint(newtonsCradle, constraint);
+      Composite.add(newtonsCradle, circle);
+      Composite.add(newtonsCradle, constraint);
     }
 
     const mouse = Mouse.create(render.canvas),
       mouseConstraint = MouseConstraint.create(engine, {
         mouse: mouse,
+        // @ts-ignore
         constraint: {
           stiffness: 0.2,
           render: {
