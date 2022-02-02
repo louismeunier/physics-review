@@ -28,7 +28,6 @@
     "@types/matter-js": "^0.17.6",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.2",
-    "mdsvex": "^0.9.8",
     "prettier": "2.5.1",
     "prettier-plugin-svelte": "^2.6.0",
     "sass": "^1.49.0",
@@ -42,6 +41,11 @@
     "vite-tsconfig-paths": "^3.3.17"
   },
   "dependencies": {
-    "matter-js": "^0.18.0"
+    "matter-js": "^0.18.0",
+    "remark-math": "2",
+    "rehype-katex": "5",
+    "unist-util-visit": "2",
+    "katex": "^0.15.2",
+    "mdsvex": "^0.9.8"
   }
 }
