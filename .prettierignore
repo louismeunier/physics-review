@@ -1,3 +1,8 @@
 dist
 .routify
 node_modules
+.gitignore
+yarn.lock
+yarn-error.log
+*.md
+.prettierignore
